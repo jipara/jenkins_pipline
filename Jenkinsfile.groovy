@@ -15,6 +15,6 @@ Prod:3.15.200.213''', name: 'Remote_instances', trim: false)])])
         sh "ssh ec2-user@${Remote_instances}  sudo mv /tmp/index.html /var/www/html/index.html"
     }
     stage("Restart httpd"){
-        sh "shh ec2-user@${Remote_instances"} sudo systemctl restart httpd"
+        sh "ssh ec2-user@${Remote_instances"} sudo systemctl restart httpd"
     }
 }
